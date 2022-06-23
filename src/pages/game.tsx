@@ -1,20 +1,21 @@
 import * as React from "react"
 import Board from "../game_components/board"
-import Piece from "../game_components/piece"
-import Spinner from "../game_components/spinner"
+import Tray from "../game_components/tray"
+
+import "../assets/scss/dice.scss";
 
 
 const GamePage = () => {
-    const colors = ["red", "green", "blue", "yellow"];
-
     return (
         <main>
-            <h1>Game Page</h1>
+            <div id="game-page"
+                style={{
+                    display: "flex",
+            }}>
+                <Board />
 
-            <Board />
-
-            {colors.map((color) => { return <Piece color={color} /> })}
-            <Spinner />
+                <Tray />
+            </div>
         </main>
     )
 }

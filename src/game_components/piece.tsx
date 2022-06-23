@@ -6,7 +6,7 @@ class Piece extends React.Component {
 
     render () {
         return (
-            <Draggable bounds="#board">
+            <Draggable bounds="#game-page">
                 <div style={{display: "inline-block", fontSize: "60px", color: this.props.color, cursor: "pointer"}}>
                     &#9823;
                 </div>

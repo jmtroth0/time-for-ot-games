@@ -1,18 +1,21 @@
-import * as React from "react"
-import Draggable from "react-draggable"
+import * as React from "react";
+import { StaticImage } from "gatsby-plugin-image";
 
 
 class Board extends React.Component {
-    render () {
+    render() {
         return (
-                <div id="board" style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
+            <div
+                id="board"
+                style={{
+                    display: "flex",
                     zIndex: -1,
-                    backgroundColor: "pink"}}></div>
+                    padding: "3%",
+                }}>
+                <StaticImage
+                    src="../images/dpqb_nobackground.png"
+                    alt="background maze" />
+            </div>
         )
     }
 }

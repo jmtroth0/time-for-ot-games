@@ -1,0 +1,57 @@
+.dice {
+    padding: 10px;
+    background-color: tomato;
+    width: 104px;
+    height: 104px;
+    border-radius: 10%;
+    margin-right: 10px;
+
+    .dot {
+        display: block;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: white;
+    }
+
+    &.one {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &.two {
+        display: flex ;
+        justify-content: space-between;
+        .dot:nth-of-type(2) {
+            align-self: flex-end;
+        }
+    }
+
+    &.three {
+        display: flex;
+        justify-content: space-between;
+
+        .dot:nth-of-type(1) {
+            align-self :flex-end;
+        }
+        .dot:nth-of-type(2) {
+            align-self :center;
+        }
+    }
+
+    &.four, &.five, &.six {
+        display: flex;
+        justify-content: space-between;
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+    &.five .column:nth-of-type(2) {
+        justify-content: center;
+    }
+}
