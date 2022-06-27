@@ -12,7 +12,7 @@ const GamePage = () => {
             <div id="game-page">
                 <Board />
                 <Pieces />
-                <Tray top="auto" bottom={0}content={<Die />} />
+                <Tray top="auto" bottom={0} content={<Spinner />} />
             </div>
         </main>
     )

@@ -1,40 +1,43 @@
 import * as React from "react"
+import "../assets/scss/spinner.scss"
 
 
 class Spinner extends React.Component<PropTypes, {}> {
+    spinner;
+    spinnerAngle = 0;
+
     constructor(props: PropTypes | Readonly<PropTypes>) {
         super(props);
-        this.state = {
-            roll: 1
-        };
+        this.spinner = React.createRef();
+
     }
 
-    rollDice = () => {
-        let counter = 0;
+    spin = () => {
+        this.spinnerAngle = 360 * ((Math.random() * 5 + 1)) + this.spinnerAngle;
+        this.spinner.current.style.transform = `rotate(${this.spinnerAngle}deg`;
+    }
 
-        const interval = setInterval(() => {
-            counter += 1;
-            if (counter >= 15) {
-                clearInterval(interval);
-            }
-
-            this.setState({roll: Math.round((Math.random() * 5) + 1)});
-        }, 100);
+    generateGradient = (colors) => {
+        let currentEnd = 0;
+        return colors.map((color) => {
+            let result = `${color} ${currentEnd}% ${currentEnd + 100/colors.length}%`;
+            currentEnd = currentEnd + 100/colors.length;
+            return result;
+        }).join(", ");
     }
 
     render () {
+        const options = ["red", "green", "purple", "orange", "yellow"]
+        const gradient = this.generateGradient(options);
+
         return (
-            <div id="spinner" onClick={() => this.rollDice()} style={{
-                display: "inline-block",
-                backgroundColor: "white",
-                border: "1px solid black",
-                borderRadius: "3px",
-                width: "80px",
-                height: "80px",
-                fontSize: "60px",
-                margin: "10px",
-                textAlign: "center"}}>
-                    { this.state.roll }
+            <div className="spinner-container">
+                <div className="pointer" />
+                <div className="spinner" onClick={() => this.spin()} ref={this.spinner}
+                    style={{
+                        backgroundImage: `conic-gradient(${gradient})`
+                    }}
+                />
             </div>
         )
     }

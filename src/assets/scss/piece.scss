@@ -1,6 +1,11 @@
-.piece {
-    display: inline-block;
-    font-size: 60px;
-    cursor: pointer;
-    z-index: 1;
+#pieces-tray {
+    display: flex;
+    justify-content: end;
+    margin-right: 20px;
+
+    .piece {
+        font-size: 60px;
+        cursor: pointer;
+        z-index: 1;
+    }
 }
