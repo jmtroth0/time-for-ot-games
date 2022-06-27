@@ -3,11 +3,10 @@ import Draggable from "react-draggable"
 
 
 class Piece extends React.Component {
-
     render () {
         return (
             <Draggable bounds="#game-page">
-                <div style={{display: "inline-block", fontSize: "60px", color: this.props.color, cursor: "pointer"}}>
+                <div className="piece" style={{color: this.props.color}}>
                     &#9823;
                 </div>
             </Draggable>

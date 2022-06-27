@@ -1,38 +1,20 @@
 import * as React from "react"
-import Piece from "./piece";
-import Spinner from "./spinner";
-import Die from "./die";
+import Draggable from "react-draggable";
+import "../assets/scss/tray.scss";
 
 
 class Tray extends React.Component {
-
     render () {
-        const colors = ["red", "green", "blue", "yellow"];
         return (
-            <div id="utilities-tray"
-                style={{
-                    display: "flex",
-                    marginTop: "auto",
-                    border: "1px solid grey",
-                    borderRadius: "3px",
-                    padding: "5px",
-            }}>
-                <div
-                    id="pieces-tray"
-                    style={{
-                        border: "1px solid grey",
-                        borderRadius: "3px",
-                        padding: "5px",
-                        margin: "10px",
-                    }}>
-                    {colors.map((color) => { return <Piece color={color} /> })}
-                </div>
+            <Draggable handle="#handle" bounds="#game-page" axis="y">
 
-                {/* <Spinner /> */}
-                <Die />
-            </div>
+                <div id="utilities-tray" style={{bottom: this.props.bottom, top: this.props.top}}>
+                    <div id="handle" />
+                    {this.props.content}
+                </div>
+            </Draggable>
         )
     }
 }
 
-export default Tray
+export default Tray;

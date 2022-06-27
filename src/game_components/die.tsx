@@ -1,4 +1,5 @@
 import * as React from "react"
+import "../assets/scss/dice.scss";
 
 
 class Die extends React.Component<PropTypes, {}> {
@@ -17,7 +18,6 @@ class Die extends React.Component<PropTypes, {}> {
             if (counter >= 15) {
                 clearInterval(interval);
             }
-            console.log("hi");
 
             this.setState({roll: Math.round((Math.random() * 5) + 1)});
         }, 100);

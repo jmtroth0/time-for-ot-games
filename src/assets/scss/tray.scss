@@ -1,0 +1,28 @@
+#utilities-tray {
+    position: absolute;
+    right: 0;
+    border: 1px solid grey;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 30px;
+
+    #handle {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: grey;
+        margin: 5px 5px 5px auto;
+    }
+
+    #pieces-tray {
+        border: 1px solid grey;
+        border-radius: 3px;
+        padding: 5px;
+        margin: 10px;
+        z-index: -2;
+    }
+
+    .dice {
+        margin: auto;
+    }
+}
