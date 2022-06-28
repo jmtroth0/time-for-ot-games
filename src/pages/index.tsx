@@ -12,18 +12,18 @@ const gameConfigs = [
         numDice: 2,
     },
     {
-        name: "Spinner Example",
-        boardImage: "dpqb_nobackground",
-        pieceColors: ["red", "green", "blue", "yellow"],
-        roller: "spinner",
-        spinnerColors: ["red", "green", "purple", "orange", "yellow", "blue"],
-    },
-    {
         name: "Spinner Other Colors Example",
         boardImage: "dpqb_nobackground",
         pieceColors: ["red", "green", "blue", "yellow"],
         roller: "spinner",
         spinnerColors: ["#E6F0DC", "#B7C6E4", "#E6F0DC", "#B7C6E4", "#E6F0DC", "#B7C6E4"],
+    },
+    {
+        name: "Other Board Spinner Colors Example",
+        boardImage: "Untitled_Artwork",
+        pieceColors: ["red", "green", "blue", "yellow"],
+        roller: "spinner",
+        spinnerColors: ["#EBE864", "#88EB64", "#EBE864", "#EBE864", "#6469EB", "#EBE864"],
     }
 ];
 

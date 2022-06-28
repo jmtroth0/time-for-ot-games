@@ -52,7 +52,7 @@ query GamePageQuery {
   allFile {
     nodes {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH)
+        gatsbyImageData(layout: FULL_WIDTH, transformOptions: {fit: COVER})
       }
       name
     }

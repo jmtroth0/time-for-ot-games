@@ -1,8 +1,8 @@
 import * as React from "react"
 import Draggable from "react-draggable";
-import "../../scss/tray.scss";
 import Spinner from "./spinner";
 import Die from "./die";
+import "../../scss/tray.scss";
 
 
 class Tray extends React.Component {

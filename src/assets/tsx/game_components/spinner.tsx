@@ -9,7 +9,6 @@ class Spinner extends React.Component<PropTypes, {}> {
     constructor(props: PropTypes | Readonly<PropTypes>) {
         super(props);
         this.spinner = React.createRef();
-
     }
 
     spin = () => {
