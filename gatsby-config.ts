@@ -8,10 +8,10 @@ const config: GatsbyConfig = {
   plugins: ["gatsby-plugin-sass", "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',
     options: {
-      "name": "images",
-      "path": "./src/images/"
+      "name": "game_backgrounds",
+      "path": "./src/assets/game_backgrounds/"
     },
-    __key: "images"
+    __key: "game_backgrounds"
   }]
 };
 

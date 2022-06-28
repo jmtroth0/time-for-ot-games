@@ -1,6 +1,8 @@
 import * as React from "react"
 import Draggable from "react-draggable";
-import "../assets/scss/tray.scss";
+import "../../scss/tray.scss";
+import Spinner from "./spinner";
+import Die from "./die";
 
 
 class Tray extends React.Component {
@@ -10,7 +12,7 @@ class Tray extends React.Component {
 
                 <div id="utilities-tray" style={{bottom: this.props.bottom, top: this.props.top}}>
                     <div id="handle" />
-                    {this.props.content}
+                    {this.props.roller === "dice" ? <Die /> : <Spinner colors={this.props.colors}/>}
                 </div>
             </Draggable>
         )

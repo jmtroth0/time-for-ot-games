@@ -1,5 +1,5 @@
 import * as React from "react"
-import "../assets/scss/spinner.scss"
+import "../../scss/spinner.scss"
 
 
 class Spinner extends React.Component<PropTypes, {}> {
@@ -27,8 +27,7 @@ class Spinner extends React.Component<PropTypes, {}> {
     }
 
     render () {
-        const options = ["red", "green", "purple", "orange", "yellow"]
-        const gradient = this.generateGradient(options);
+        const gradient = this.generateGradient(this.props.colors);
 
         return (
             <div className="spinner-container">

@@ -1,5 +1,5 @@
 import * as React from "react"
-import "../assets/scss/dice.scss";
+import "../../scss/dice.scss";
 
 
 class Die extends React.Component<PropTypes, {}> {
