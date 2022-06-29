@@ -1,0 +1,53 @@
+#instructions-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    #instructions-button {
+        border: 1px solid grey;
+        border-radius: 3px;
+        padding: 5px;
+        background: black;
+        color: white;
+        cursor: pointer;
+        margin-left: 10px;
+        &:hover {
+            background: rgb(78, 78, 78)
+        }
+        &:active {
+            background: rgba(130, 127, 127, 0.479)
+        }
+    }
+
+    #instructions-modal, #instructions-modal-screen {
+        display: none;
+        cursor: pointer;
+        &.open {
+            display: block;
+        }
+        position: fixed;
+    }
+
+    #instructions-modal-screen {
+        background: black;
+        opacity: 40%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    #instructions-modal {
+        border: 1px solid grey;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 2;
+        background: white;
+        padding: 50px;
+        margin: 10px;
+        font-size: 40px;
+    }
+
+}

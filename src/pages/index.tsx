@@ -1,6 +1,7 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import GameDisplay from "../assets/tsx/components/game_display";
+import "../assets/scss/main.scss"
 
 
 const gameConfigs = [
@@ -10,6 +11,7 @@ const gameConfigs = [
         pieceColors: ["red", "green", "blue", "yellow"],
         roller: "dice",
         numDice: 2,
+        instructionsContent: "Roll the dice and move that number of boxes",
     },
     {
         name: "Spinner Other Colors Example",
@@ -17,6 +19,7 @@ const gameConfigs = [
         pieceColors: ["red", "green", "blue", "yellow"],
         roller: "spinner",
         spinnerColors: ["#E6F0DC", "#B7C6E4", "#E6F0DC", "#B7C6E4", "#E6F0DC", "#B7C6E4"],
+        instructionsContent: "Spin the spinner and move to the next box of that color",
     },
     {
         name: "Other Board Spinner Colors Example",
@@ -24,6 +27,7 @@ const gameConfigs = [
         pieceColors: ["red", "green", "blue", "yellow"],
         roller: "spinner",
         spinnerColors: ["#EBE864", "#88EB64", "#EBE864", "#EBE864", "#6469EB", "#EBE864"],
+        instructionsContent: "Spin the spinner and move to the next box of that color",
     }
 ];
 
