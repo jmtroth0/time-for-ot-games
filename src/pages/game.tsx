@@ -5,6 +5,7 @@ import Board from "../assets/tsx/game_components/board"
 import Tray from "../assets/tsx/game_components/tray"
 import Pieces from "../assets/tsx/game_components/pieces";
 import Instructions from "../assets/tsx/game_components/instructions";
+import Feedback from "../assets/tsx/game_components/feedback";
 import "../assets/scss/main.scss"
 
 function getNamesToGatsbyImageData(queryResult) {
@@ -38,7 +39,7 @@ const GamePage = ({location, data}) => {
         pieceColors = ["red", "green", "blue", "yellow"];
         roller = "dice";
         numSides = 6;
-        numDice = 2;
+        numDice = 1;
         spinnerColors = ["red", "green", "purple", "orange", "yellow", "blue"];
         instructionsContent = "this is how you play";
     }
@@ -47,7 +48,10 @@ const GamePage = ({location, data}) => {
         <main>
             <div id="game-page">
                 <header id="game-header">
-                    <Instructions content={instructionsContent} />
+                    <div id="header-clickables">
+                        <Instructions content={instructionsContent} />
+                        <Feedback />
+                    </div>
                     <Pieces colors={pieceColors}/>
                 </header>
                 <Board image={imageData.get(boardImage)} />

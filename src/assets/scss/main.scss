@@ -1,4 +1,8 @@
 
+body {
+    font-family: Sans-Serif;
+}
+
 button {
     border: none;
     margin: 0;
@@ -33,4 +37,8 @@ button {
     border-bottom: 1px solid grey;
     display: flex;
     justify-content: space-between;
+
+    #header-clickables {
+        display: flex;
+    }
 }
