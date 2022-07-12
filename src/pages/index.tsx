@@ -28,13 +28,23 @@ const gameConfigs = [
         roller: "spinner",
         spinnerColors: ["#EBE864", "#88EB64", "#EBE864", "#EBE864", "#6469EB", "#EBE864"],
         instructionsContent: "Spin the spinner and move to the next box of that color",
+    },
+    {
+        name: "New Colorful Board Spinner Colors Example",
+        boardImage: "CrossingMidlineBoardGame_00001",
+        extension: "svg",
+        pieceColors: ["red", "green", "blue", "yellow"],
+        roller: "spinner",
+        spinnerColors: ["#EBE864", "#88EB64", "#EBE864", "#EBE864", "#6469EB", "#EBE864"],
+        instructionsContent: "Spin the spinner and move to the next box of that color",
     }
+
 ];
 
 
 function getNamesToGatsbyImageData(queryResult) {
     return new Map(queryResult.allFile.nodes.map((node) => {
-        return [node.name, node.childImageSharp.gatsbyImageData];
+        return [node.name, node?.childImageSharp?.gatsbyImageData];
     }));
 }
 
@@ -43,7 +53,7 @@ const IndexPage = ({data}) => {
     return (
         <main>
             { gameConfigs.map((config) => {
-              return <GameDisplay config={config} image={imageData.get(config.boardImage)} key={config.name} />
+                return <GameDisplay config={config} image={imageData.get(config.boardImage)} key={config.name} />
             })}
         </main>
     )

@@ -9,7 +9,7 @@ import "../assets/scss/main.scss"
 
 function getNamesToGatsbyImageData(queryResult) {
     return new Map(queryResult.allFile.nodes.map((node) => {
-        return [node.name, getImage(node.childImageSharp.gatsbyImageData)];
+        return [node.name, getImage(node?.childImageSharp?.gatsbyImageData)];
     }));
 }
 
@@ -53,7 +53,8 @@ const GamePage = ({location, data}) => {
     )
 }
 
-export default GamePage
+export default GamePage;
+
 export const query = graphql`
 query GamePageQuery {
   allFile {

@@ -12,34 +12,18 @@
         cursor: pointer;
         margin-left: 10px;
         &:hover {
-            background: rgb(78, 78, 78)
-        }
-        &:active {
-            background: rgba(130, 127, 127, 0.479)
+            background: #808080
         }
     }
 
-    #instructions-modal, #instructions-modal-screen {
+    #instructions-modal {
         display: none;
         cursor: pointer;
         &.open {
             display: block;
         }
         position: fixed;
-    }
-
-    #instructions-modal-screen {
-        background: black;
-        opacity: 40%;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 1;
-    }
-
-    #instructions-modal {
-        border: 1px solid grey;
+        border: 1px solid #808080;
         top: 50%;
         left: 50%;
         transform: translateX(-50%) translateY(-50%);
@@ -48,6 +32,8 @@
         padding: 50px;
         margin: 10px;
         font-size: 40px;
+        background: #E0E0E0;
+        filter: drop-shadow(3px 2px 2px #808080);
     }
 
 }
