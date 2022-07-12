@@ -22,7 +22,6 @@ const BOARD_NAMES = {
 }
 
 const getBoardImage = (boardName) => {
-    console.log(boardName);
     return BOARD_NAMES[boardName]
 }
 

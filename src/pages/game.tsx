@@ -6,7 +6,7 @@ import Tray from "../assets/tsx/game_components/tray"
 import Pieces from "../assets/tsx/game_components/pieces";
 import Instructions from "../assets/tsx/game_components/instructions";
 import Feedback from "../assets/tsx/components/feedback";
-import "../assets/scss/main.scss"
+import "../assets/scss/main.scss";
 
 
 const GamePage = ({location, data}) => {
@@ -28,6 +28,19 @@ const GamePage = ({location, data}) => {
             spinnerColors = location.state.config.spinnerColors;
         }
         instructionsContent = location.state.config.instructionsContent;
+        window.sessionStorage.config = JSON.stringify(location.state.config);
+    } else if (window.sessionStorage.config) {
+        let config = JSON.parse(window.sessionStorage.config)
+        boardImage = config.boardImage;
+        pieceColors = config.pieceColors || ["red", "green", "blue", "yellow"];
+        roller = config.roller;
+        if (roller === "dice") {
+            numDice = config.numDice;
+            numSides = config.numSides;
+        } else if (roller === "spinner") {
+            spinnerColors = config.spinnerColors;
+        }
+        instructionsContent = config.instructionsContent;
     } else {
         boardImage = "CoreStrength";
         pieceColors = ["red", "green", "blue", "yellow"];

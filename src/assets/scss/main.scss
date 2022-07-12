@@ -37,10 +37,16 @@ button {
     border-bottom: 1px solid grey;
     display: flex;
     justify-content: space-between;
+    align-content: center;
     padding: 10px;
     height: 50px;
 
     #header-clickables {
         display: flex;
+    }
+    #title {
+        display: flex;
+        font-size: 3em;
+        align-self: center;
     }
 }
