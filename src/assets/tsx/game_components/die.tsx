@@ -11,15 +11,15 @@ class Die extends React.Component<PropTypes, {}> {
     }
 
     rollDice = () => {
-        let counter = 0;
+        let counter = Math.round(Math.random() * 15) + 15;
 
         const interval = setInterval(() => {
-            counter += 1;
-            if (counter >= 15) {
+            counter -= 1;
+            if (counter <= 0) {
                 clearInterval(interval);
             }
 
-            this.setState({roll: Math.round((Math.random() * 5) + 1)});
+            this.setState({roll: Math.round((Math.random() * ((this.props.numSides || 5) - 1)) + 1)});
         }, 100);
     }
 

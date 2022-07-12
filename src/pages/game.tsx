@@ -19,6 +19,7 @@ const GamePage = ({location, data}) => {
     let pieceColors;
     let roller;
     let numDice;
+    let numSides;
     let spinnerColors;
     let instructionsContent;
     if (location.state) {
@@ -27,6 +28,7 @@ const GamePage = ({location, data}) => {
         roller = location.state.config.roller;
         if (roller === "dice") {
             numDice = location.state.config.numDice;
+            numSides = location.state.config.numSides;
         } else if (roller === "spinner") {
             spinnerColors = location.state.config.spinnerColors;
         }
@@ -34,7 +36,9 @@ const GamePage = ({location, data}) => {
     } else {
         boardImage = "dpqb_nobackground";
         pieceColors = ["red", "green", "blue", "yellow"];
-        roller = "spinner";
+        roller = "dice";
+        numSides = 6;
+        numDice = 2;
         spinnerColors = ["red", "green", "purple", "orange", "yellow", "blue"];
         instructionsContent = "this is how you play";
     }
@@ -47,7 +51,7 @@ const GamePage = ({location, data}) => {
                     <Pieces colors={pieceColors}/>
                 </header>
                 <Board image={imageData.get(boardImage)} />
-                <Tray top="auto" bottom={0} roller={roller} colors={spinnerColors} numDice={numDice} />
+                <Tray top="auto" bottom={0} roller={roller} colors={spinnerColors} numDice={numDice} numSides={numSides} />
             </div>
         </main>
     )
