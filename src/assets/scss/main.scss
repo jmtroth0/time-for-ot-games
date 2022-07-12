@@ -1,4 +1,3 @@
-
 body {
     font-family: Sans-Serif;
     margin: 0;
@@ -30,7 +29,7 @@ button {
 
 
 #game-header {
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -39,6 +38,7 @@ button {
     display: flex;
     justify-content: space-between;
     padding: 10px;
+    height: 50px;
 
     #header-clickables {
         display: flex;

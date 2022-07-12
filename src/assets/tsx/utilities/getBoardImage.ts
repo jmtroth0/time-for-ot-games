@@ -8,6 +8,7 @@ import nrsz from "../../game_backgrounds/nrsz.svg";
 import Numbers from "../../game_backgrounds/Numbers.svg";
 import Prewriting from "../../game_backgrounds/Prewriting.svg";
 
+
 const BOARD_NAMES = {
     bdpq: bdpq,
     Capitals: Capitals,

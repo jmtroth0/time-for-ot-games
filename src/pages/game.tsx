@@ -8,12 +8,6 @@ import Instructions from "../assets/tsx/game_components/instructions";
 import Feedback from "../assets/tsx/components/feedback";
 import "../assets/scss/main.scss"
 
-function getNamesToGatsbyImageData(queryResult) {
-    return new Map(queryResult.allFile.nodes.map((node) => {
-        return [node.name, getImage(node?.childImageSharp?.gatsbyImageData)];
-    }));
-}
-
 
 const GamePage = ({location, data}) => {
     let boardImage;
@@ -43,7 +37,6 @@ const GamePage = ({location, data}) => {
         spinnerColors = ["red", "green", "purple", "orange", "yellow", "blue"];
         instructionsContent = "this is how you play";
     }
-    const imageData = getNamesToGatsbyImageData(data);
     return (
         <main>
             <div id="game-page">
@@ -62,16 +55,3 @@ const GamePage = ({location, data}) => {
 }
 
 export default GamePage;
-
-export const query = graphql`
-query GamePageQuery {
-  allFile {
-    nodes {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, transformOptions: {fit: COVER})
-      }
-      name
-    }
-  }
-}
-`
