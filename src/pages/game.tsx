@@ -1,6 +1,4 @@
 import * as React from "react"
-import { graphql } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
 import Board from "../assets/tsx/game_components/board"
 import Tray from "../assets/tsx/game_components/tray"
 import Pieces from "../assets/tsx/game_components/pieces";

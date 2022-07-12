@@ -1,5 +1,4 @@
 import * as React from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
 import "../../scss/board.scss";
 import getBoardImage from "../utilities/getBoardImage";
 

@@ -1,6 +1,5 @@
 import * as React from "react";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { Link, StaticQuery, graphql } from "gatsby";
+import { Link } from "gatsby";
 import "../../scss/game-display.scss";
 import getBoardImage from "../utilities/getBoardImage";
 
