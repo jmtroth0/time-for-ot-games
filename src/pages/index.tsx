@@ -1,75 +1,96 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import GameDisplay from "../assets/tsx/components/game_display";
+import Feedback from "../assets/tsx/components/feedback";
 import "../assets/scss/main.scss"
 
 
-const gameConfigs = [
-    {
-        name: "Dice Example",
-        boardImage: "dpqb_nobackground",
-        pieceColors: ["red", "green", "blue", "yellow"],
-        roller: "dice",
-        numDice: 2,
-        instructionsContent: "Roll the dice and move that number of boxes",
-    },
-    {
-        name: "Spinner Other Colors Example",
-        boardImage: "dpqb_nobackground",
-        pieceColors: ["red", "green", "blue", "yellow"],
-        roller: "spinner",
-        spinnerColors: ["#E6F0DC", "#B7C6E4", "#E6F0DC", "#B7C6E4", "#E6F0DC", "#B7C6E4"],
-        instructionsContent: "Spin the spinner and move to the next box of that color",
-    },
-    {
-        name: "Other Board Spinner Colors Example",
-        boardImage: "Untitled_Artwork",
-        pieceColors: ["red", "green", "blue", "yellow"],
-        roller: "spinner",
-        spinnerColors: ["#EBE864", "#88EB64", "#EBE864", "#EBE864", "#6469EB", "#EBE864"],
-        instructionsContent: "Spin the spinner and move to the next box of that color",
-    },
-    {
-        name: "New Colorful Board Spinner Colors Example",
-        boardImage: "CrossingMidlineBoardGame_00001",
-        extension: "svg",
-        pieceColors: ["red", "green", "blue", "yellow"],
-        roller: "spinner",
-        spinnerColors: ["#EBE864", "#88EB64", "#EBE864", "#EBE864", "#6469EB", "#EBE864"],
-        instructionsContent: "Spin the spinner and move to the next box of that color",
-    }
+const gameConfigs = {
+    "Handwriting": [
+        {
+            name: "Any Letters (Capitals)",
+            boardImage: "Capitals",
+            roller: "dice",
+            instructionsContent: "Roll the dice and write the letter you land on. \nUpgrade: Write a word that starts with the letter you land one",
+        },
+        {
+            name: "Any Letters (Lowercase)",
+            boardImage: "LowerCase",
+            roller: "dice",
+            instructionsContent: "Roll the dice and write the letter you land on. \nUpgrade: Write a word that starts with the letter you land one",
+        },
+        {
+            name: "Common Reversals (bdpq)",
+            boardImage: "bdpq",
+            roller: "dice",
+            instructionsContent: "Roll the dice and write the letter you land on. \nUpgrade: Write a word that starts with the letter you land one",
+        },
+        {
+            name: "Common Reversals (NRSZ)",
+            boardImage: "nrsz",
+            roller: "dice",
+            instructionsContent: "Roll the dice and write the letter you land on. \nUpgrade: Write a word that starts with the letter you land one",
+        },
+        {
+            name: "Common Number Reversals",
+            boardImage: "Numbers",
+            roller: "dice",
+            instructionsContent: "Roll the dice and write the letter you land on. \nUpgrade: Write a word that starts with the letter you land one",
+        },
+        {
+            name: "Prewriting Strokes",
+            boardImage: "Prewriting",
+            roller: "dice",
+            numSides: 4,
+            instructionsContent: "Roll the dice and write the letter you land on. \nUpgrade: Write a word that starts with the letter you land one",
+        },
+    ],
+    "Gross Motor": [
+        {
+          name: "With Pictures/Movements",
+          boardImage: "Movements",
+          roller: "dice",
+          numSides: 4,
+          instructionsContent: "Copy or complete the movement landed on. Decide on a number of repetitions or roll the dice again for the number of repetitions",
+        },
+        {
+          name: "Core Strength",
+          boardImage: "CoreStrength",
+          roller: "dice",
+          instructionsContent: "Copy or complete the movement landed on. Decide on a number of repetitions or roll the dice again for the number of repetitions",
+        },
+        {
+          name: "Crossing Midline",
+          boardImage: "CrossingMidline",
+          roller: "dice",
+          instructionsContent: "Copy or complete the movement landed on. Decide on a number of repetitions or roll the dice again for the number of repetitions",
+        },
+    ],
+};
 
-];
-
-
-function getNamesToGatsbyImageData(queryResult) {
-    return new Map(queryResult.allFile.nodes.map((node) => {
-        return [node.name, node?.childImageSharp?.gatsbyImageData];
-    }));
-}
 
 const IndexPage = ({data}) => {
-    const imageData = getNamesToGatsbyImageData(data);
     return (
         <main>
-            { gameConfigs.map((config) => {
-                return <GameDisplay config={config} image={imageData.get(config.boardImage)} key={config.name} />
+            <header id="game-header">
+                <div id="header-clickables">
+                    <Feedback />
+                </div>
+            </header>
+            { Object.keys(gameConfigs).map((sectionName) => {
+                return (
+                    <div className="game-display-section" key={sectionName}>
+                        <span className="game-display-section-header">{sectionName}</span>
+                        <div className="game-displays">
+                            {gameConfigs[sectionName].map((config) => {
+                                return <GameDisplay config={config} image={config.boardImage} key={config.name} />
+                            })}
+                        </div>
+                    </div>
+                )
             })}
         </main>
     )
 }
 
 export default IndexPage;
-
-export const query = graphql`
-query IndexQuery {
-  allFile {
-    nodes {
-      childImageSharp {
-        gatsbyImageData
-      }
-      name
-    }
-  }
-}
-`

@@ -1,12 +1,40 @@
-.game-display {
-    display: inline-flex;
-    border: 1px solid grey;
-    margin: 10px;
-    padding: 10px;
-    max-width: 400px;
+.game-display-section {
+    border-bottom: 1px solid grey;
+    padding: 5px;
+    margin: 20px;
 
-    .game-image, .config-name {
+    .game-display-section-header {
+        font-size: 2em;
+        width: 200px;
+    }
+
+    .game-displays {
         display: flex;
-        justify-content: center;
+        flex-wrap: wrap;
+        align-content: flex-start;
+
+        .game-display {
+            border: 1px solid grey;
+            margin: 10px;
+            padding: 10px;
+            width: 30%;
+            max-width: 300px;
+            display: flex;
+            align-items: stretch;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .game-display-image {
+                border: 1px solid grey;
+                width: 100%;
+                max-width: 300px;
+                padding: auto;
+            }
+
+            .game-image, .config-name {
+                display: flex;
+                justify-content: center;
+            }
+        }
     }
 }

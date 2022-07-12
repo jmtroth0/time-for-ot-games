@@ -1,28 +1,16 @@
 import * as React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import "../../scss/board.scss";
-import BoardImage from "../../game_backgrounds/CrossingMidlineBoardGame_00001.svg";
+import CrossingMidline from "../../game_backgrounds/CrossingMidline.svg";
+import getBoardImage from "../utilities/getBoardImage";
 
 
 class Board extends React.Component {
     render() {
-        let image;
-        if (this.props.image) {
-            image = <GatsbyImage
-                style={{
-                    gridArea: "1/1",
-                }}
-                draggable="false"
-                image={this.props.image}
-                alt="background maze"
-                placeholder="blurred"
-                layout="fullWidth" />
-        } else {
-            image = <img className="game-image" src={BoardImage} draggable="false"></img>
-        }
+        console.log(this.props);
         return (
             <div id="board">
-                {image}
+                <img className="game-image" src={getBoardImage(this.props.boardImage)} draggable="false"></img>
             </div>
         )
     }

@@ -5,7 +5,7 @@ import Board from "../assets/tsx/game_components/board"
 import Tray from "../assets/tsx/game_components/tray"
 import Pieces from "../assets/tsx/game_components/pieces";
 import Instructions from "../assets/tsx/game_components/instructions";
-import Feedback from "../assets/tsx/game_components/feedback";
+import Feedback from "../assets/tsx/components/feedback";
 import "../assets/scss/main.scss"
 
 function getNamesToGatsbyImageData(queryResult) {
@@ -25,7 +25,7 @@ const GamePage = ({location, data}) => {
     let instructionsContent;
     if (location.state) {
         boardImage = location.state.config.boardImage;
-        pieceColors = location.state.config.pieceColors;
+        pieceColors = location.state.config.pieceColors || ["red", "green", "blue", "yellow"];
         roller = location.state.config.roller;
         if (roller === "dice") {
             numDice = location.state.config.numDice;
@@ -35,7 +35,7 @@ const GamePage = ({location, data}) => {
         }
         instructionsContent = location.state.config.instructionsContent;
     } else {
-        boardImage = "dpqb_nobackground";
+        boardImage = "CoreStrength";
         pieceColors = ["red", "green", "blue", "yellow"];
         roller = "dice";
         numSides = 6;
@@ -54,7 +54,7 @@ const GamePage = ({location, data}) => {
                     </div>
                     <Pieces colors={pieceColors}/>
                 </header>
-                <Board image={imageData.get(boardImage)} />
+                <Board boardImage={boardImage} />
                 <Tray top="auto" bottom={0} roller={roller} colors={spinnerColors} numDice={numDice} numSides={numSides} />
             </div>
         </main>

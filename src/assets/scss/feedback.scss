@@ -1,0 +1,24 @@
+#feedback-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    #feedback-button {
+        border: 1px solid grey;
+        border-radius: 3px;
+        padding: 5px;
+        background: black;
+        color: white;
+        cursor: pointer;
+        margin-left: 10px;
+        text-decoration: none;
+
+        &:hover {
+            background: #808080
+        }
+        &:active {
+            background: #E8EAEC;
+            color: black;
+        }
+    }
+}
