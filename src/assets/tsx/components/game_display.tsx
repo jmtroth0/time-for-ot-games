@@ -2,7 +2,7 @@ import * as React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Link, StaticQuery, graphql } from "gatsby";
 import "../../scss/game-display.scss";
-import Board from "../../game_backgrounds/CrossingMidlineBoardGame_00001.svg"
+import Board from "../../game_backgrounds/CrossingMidlineBoardGame_00001.svg";
 
 
 class GameDisplay extends React.Component {

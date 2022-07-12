@@ -10,14 +10,15 @@ class Board extends React.Component {
         if (this.props.image) {
             image = <GatsbyImage
                 style={{
-                    gridArea: "1/1"
+                    gridArea: "1/1",
                 }}
+                draggable="false"
                 image={this.props.image}
                 alt="background maze"
                 placeholder="blurred"
                 layout="fullWidth" />
         } else {
-            image = <img className="game-image" src={BoardImage}></img>
+            image = <img className="game-image" src={BoardImage} draggable="false"></img>
         }
         return (
             <div id="board">
