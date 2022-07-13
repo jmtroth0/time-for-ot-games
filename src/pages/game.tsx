@@ -58,7 +58,6 @@ const GamePage = ({location, data}) => {
                 <header id="game-header">
                     <div id="header-clickables">
                         <Instructions content={instructionsContent} />
-                        <Feedback />
                     </div>
                     <Pieces colors={pieceColors}/>
                 </header>

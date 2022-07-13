@@ -3,6 +3,12 @@ body {
     margin: 0;
 }
 
+a {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
 button {
     border: none;
     margin: 0;

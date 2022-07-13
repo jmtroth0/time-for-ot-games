@@ -26,12 +26,20 @@
             align-items: stretch;
             flex-direction: column;
             justify-content: space-between;
+            border-radius: 3px;
+
+            &:hover {
+                background: grey;
+            }
 
             .game-display-image {
                 border: 1px solid grey;
                 width: 100%;
                 max-width: 300px;
-                padding: auto;
+                height: 100%;
+                object-fit: contain;
+                margin-bottom: 10px;
+                background: white;
             }
 
             .game-image, .config-name {
