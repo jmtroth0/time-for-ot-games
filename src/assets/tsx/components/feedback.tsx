@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import "../../scss/feedback.scss";
 
 
-const Feedback = (props) => {
+const Feedback = () => {
     const modal = React.createRef();
 
     return (
