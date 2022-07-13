@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, {useState, useEffect} from "react"
 import Board from "../assets/tsx/game_components/board"
 import Tray from "../assets/tsx/game_components/tray"
 import Pieces from "../assets/tsx/game_components/pieces";
@@ -35,6 +35,34 @@ const GamePage = ({location}) => {
         spinnerColors = ["red", "green", "purple", "orange", "yellow", "blue"];
         instructionsContent = "this is how you play";
     }
+
+    const [boardImage, setBoardImage] = useState("CoreStrength");
+    const [pieceColors, setPieceColors] = useState(["red", "green", "blue", "yellow"]);
+    const [roller, setRoller] = useState("dice");
+    const [numDice, setNumDice] = useState(1);
+    const [numSides, setNumSides] = useState(6);
+    const [spinnerColors, setSpinnerColors] = useState(["red", "green", "purple", "orange", "yellow", "blue"]);
+    const [instructionsContent, setInstructionsContent] = useState("this is how you play");
+
+
+    // useEffect(() => {
+    //     if (window.sessionStorage.getItem('config')) {
+    //         let config = JSON.parse(window.sessionStorage.config)
+    //         setBoardImage(config.boardImage);
+    //         setPieceColors(config.pieceColors || ["red", "green", "blue", "yellow"]);
+    //         setRoller(config.roller);
+    //         if (config.roller === "dice") {
+    //             setNumDice(config.numDice);
+    //             setNumSides(config.numSides);
+    //         } else if (roller === "spinner") {
+    //             setSpinnerColors(config.spinnerColors);
+    //         }
+    //         setInstructionsContent(config.instructionsContent);
+    //     }
+
+    //     sessionStorage.config = JSON.stringify(location.state.config);
+    // }, [])
+
     return (
         <main>
             <div id="game-page">
