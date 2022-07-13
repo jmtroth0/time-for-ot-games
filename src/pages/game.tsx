@@ -4,6 +4,7 @@ import Tray from "../assets/tsx/game_components/tray"
 import Pieces from "../assets/tsx/game_components/pieces";
 import Instructions from "../assets/tsx/game_components/instructions";
 import Feedback from "../assets/tsx/components/feedback";
+import { SquareLoader } from "react-spinners";
 import "../assets/scss/main.scss";
 
 
@@ -15,7 +16,8 @@ const GamePage = ({location, data}) => {
     let initNumSides = 6;
     let initSpinnerColors = ["red", "green", "purple", "orange", "yellow", "blue"];
     let initInstructionsContent = "this is how you play";
-    if (location.state) {
+    let initLoading = true;
+    if (location.state?.config) {
         initBoardImage = location.state.config.boardImage || initBoardImage;
         initPieceColors = location.state.config.pieceColors || initPieceColors;
         initRoller = location.state.config.roller || initRoller;
@@ -23,6 +25,7 @@ const GamePage = ({location, data}) => {
         initNumSides = location.state.config.numSides || initNumSides;
         initSpinnerColors = location.state.config.spinnerColors || initSpinnerColors;
         initInstructionsContent = location.state.config.instructionsContent || initInstructionsContent;
+        initLoading = false;
     }
 
     const [boardImage, setBoardImage] = useState(initBoardImage);
@@ -32,11 +35,12 @@ const GamePage = ({location, data}) => {
     const [numSides, setNumSides] = useState(initNumSides);
     const [spinnerColors, setSpinnerColors] = useState(initSpinnerColors);
     const [instructionsContent, setInstructionsContent] = useState(initInstructionsContent);
-
+    const [loading, setLoading] = useState(initLoading);
 
     useEffect(() => {
-        if (location.state) {
-            sessionStorage.config = JSON.stringify(location.state.config);
+        // setLoading(false);
+        if (location.state?.config) {
+            window.sessionStorage.config = JSON.stringify(location.state.config);
         } else if (window.sessionStorage.getItem('config')) {
             let config = JSON.parse(window.sessionStorage.config)
             setBoardImage(config.boardImage);
@@ -50,7 +54,7 @@ const GamePage = ({location, data}) => {
             }
             setInstructionsContent(config.instructionsContent);
         }
-    }, [])
+    }, []);
 
     return (
         <main>
@@ -59,9 +63,12 @@ const GamePage = ({location, data}) => {
                     <div id="header-clickables">
                         <Instructions content={instructionsContent} />
                     </div>
-                    <Pieces colors={pieceColors}/>
+                    <Pieces colors={pieceColors} />
                 </header>
-                <Board boardImage={boardImage} />
+                <div id="loading-spinner">
+                    <SquareLoader loading={loading} />
+                </div>
+                <Board boardImage={boardImage} loading={loading}  />
                 <Tray top="auto" bottom={0} roller={roller} colors={spinnerColors} numDice={numDice} numSides={numSides} />
             </div>
         </main>

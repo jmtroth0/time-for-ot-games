@@ -11,7 +11,7 @@ class Tray extends React.Component {
         let numDice = this.props.numDice;
         let numSides = this.props.numSides;
         if (this.props.roller === "dice") {
-            roller = []
+            roller = [];
             for (let i = 0; i < (this.props.numDice || 1); i++) {
                 roller.push(<Die numSides={numSides} key={i}/>)
             }
