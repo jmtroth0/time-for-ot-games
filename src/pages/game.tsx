@@ -38,7 +38,7 @@ const GamePage = ({location, data}) => {
     const [loading, setLoading] = useState(initLoading);
 
     useEffect(() => {
-        // setLoading(false);
+        setLoading(false);
         if (location.state?.config) {
             window.sessionStorage.config = JSON.stringify(location.state.config);
         } else if (window.sessionStorage.getItem('config')) {
