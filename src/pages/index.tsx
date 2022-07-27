@@ -4,6 +4,8 @@ import GameDisplay from "../assets/tsx/components/game_display";
 import Feedback from "../assets/tsx/components/feedback";
 import "../assets/scss/main.scss";
 import getConfigs from "../assets/tsx/utilities/config";
+import SEO from "../assets/tsx/utilities/seo";
+import { StaticImage } from "gatsby-plugin-image";
 
 
 
@@ -16,7 +18,7 @@ const IndexPage = () => {
                 <div id="header-clickables">
                     <Feedback />
                 </div>
-                <span id="title">Time for OT</span>
+                <StaticImage id="title-logo" src="../images/logo.png" alt="Time 4 OT logo" height={50} width={150}/>
             </header>
             <div id="game-display-sections">
                 { Object.keys(gameConfigs).map((sectionName) => {
@@ -37,3 +39,9 @@ const IndexPage = () => {
 }
 
 export default IndexPage;
+
+export const Head = () => (
+    <SEO />
+);
+
+                // <span id="title">Time for OT</span>

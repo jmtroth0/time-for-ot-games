@@ -6,6 +6,8 @@ import Instructions from "../assets/tsx/game_components/instructions";
 import Feedback from "../assets/tsx/components/feedback";
 import { SquareLoader } from "react-spinners";
 import "../assets/scss/main.scss";
+import SEO from "../assets/tsx/utilities/seo";
+import { StaticImage } from "gatsby-plugin-image";
 
 
 const GamePage = ({location, data}) => {
@@ -63,6 +65,7 @@ const GamePage = ({location, data}) => {
                     <div id="header-clickables">
                         <Instructions content={instructionsContent} />
                     </div>
+                    <StaticImage id="title-logo" src="../images/logo.png" alt="Time 4 OT logo" height={50} width={150}/>
                     <Pieces colors={pieceColors} />
                 </header>
                 <div id="loading-spinner">
@@ -76,3 +79,7 @@ const GamePage = ({location, data}) => {
 }
 
 export default GamePage;
+
+export const Head = () => (
+    <SEO />
+);
