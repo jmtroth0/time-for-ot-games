@@ -5,7 +5,7 @@ import Feedback from "../assets/tsx/components/feedback";
 import "../assets/scss/main.scss";
 import getConfigs from "../assets/tsx/utilities/config";
 import SEO from "../assets/tsx/utilities/seo";
-import { StaticImage } from "gatsby-plugin-image";
+import Header from "../assets/tsx/components/header";
 
 
 
@@ -14,12 +14,7 @@ const IndexPage = () => {
 
     return (
         <main>
-            <header id="game-header">
-                <div id="header-clickables">
-                    <Feedback />
-                </div>
-                <StaticImage id="title-logo" src="../images/logo.png" alt="Time 4 OT logo" height={50} width={150}/>
-            </header>
+            <Header />
             <div id="game-display-sections">
                 { Object.keys(gameConfigs).map((sectionName) => {
                     return (

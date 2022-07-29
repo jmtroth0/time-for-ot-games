@@ -1,0 +1,12 @@
+
+#header-container {
+    #header-toolbar {
+        display: flex;
+        justify-content: space-between;
+        background: #91dcff;
+
+        #header-clickables {
+            display: flex;
+        }
+    }
+}

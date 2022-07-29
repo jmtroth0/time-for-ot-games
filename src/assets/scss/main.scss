@@ -33,21 +33,3 @@ button {
     -webkit-appearance: none;
 }
 
-
-#game-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: #91dcff;
-    border-bottom: 1px solid grey;
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    padding: 10px;
-    height: 50px;
-
-    #header-clickables {
-        display: flex;
-    }
-}
