@@ -15,7 +15,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import "../../scss/header.scss";
 
 
-export default function Header(props) {
+const Header = (props) => {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
     const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -39,7 +39,7 @@ export default function Header(props) {
                             <MenuIcon />
                     </IconButton>
                     {props.children}
-                    <StaticImage id="title-logo" src="../images/logo.png" alt="Time 4 OT logo" height={50} width={150} />
+                    <StaticImage id="title-logo" src="../../images/logo.png" alt="Time 4 OT logo" height={50} width={150} />
                     </Toolbar>
                     <div>
                         <Menu
@@ -67,3 +67,5 @@ export default function Header(props) {
         </Box>
     );
 }
+
+export default Header;

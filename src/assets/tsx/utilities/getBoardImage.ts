@@ -1,15 +1,15 @@
-import bdpq from "../../game_backgrounds/bdpq.svg";
-import Capitals from "../../game_backgrounds/Capitals.svg";
-import Core from "../../game_backgrounds/Core.svg";
-import CrossingMidline from "../../game_backgrounds/CrossingMidline.svg";
-import EmotionsEmojis from "../../game_backgrounds/EmotionsEmojis.svg";
-import FineMotorVisualMotor from "../../game_backgrounds/FineMotorVisualMotor.svg";
-import LowerCase from "../../game_backgrounds/LowerCase.svg";
-import Movements from "../../game_backgrounds/Movements.svg";
-import nrsz from "../../game_backgrounds/nrsz.svg";
-import Numbers from "../../game_backgrounds/Numbers.svg";
-import PicturesGM from "../../game_backgrounds/PicturesGM.svg";
-import Prewriting from "../../game_backgrounds/Prewriting.svg";
+import bdpq from "../../images/bdpq.svg";
+import Capitals from "../../images/Capitals.svg";
+import Core from "../../images/Core.svg";
+import CrossingMidline from "../../images/CrossingMidline.svg";
+import EmotionsEmojis from "../../images/EmotionsEmojis.svg";
+import FineMotorVisualMotor from "../../images/FineMotorVisualMotor.svg";
+import LowerCase from "../../images/LowerCase.svg";
+import Movements from "../../images/Movements.svg";
+import nrsz from "../../images/nrsz.svg";
+import Numbers from "../../images/Numbers.svg";
+import PicturesGM from "../../images/PicturesGM.svg";
+import Prewriting from "../../images/Prewriting.svg";
 
 
 const BOARD_NAMES = {
