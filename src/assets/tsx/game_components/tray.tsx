@@ -19,10 +19,13 @@ class Tray extends React.Component {
             roller = <Spinner colors={this.props.colors} />
         }
         return (
-            <Draggable handle="#handle" bounds="#game-page" axis="y">
+            <Draggable
+                // handle="#handle"
+                bounds="#game-page"
+                axis="y">
 
                 <div id="utilities-tray" style={{bottom: this.props.bottom, top: this.props.top}}>
-                    <div id="handle" />
+                    {/* <div id="handle" /> */}
                     {roller}
                 </div>
             </Draggable>
