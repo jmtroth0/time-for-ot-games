@@ -3,8 +3,12 @@
     justify-content: right;
 
     .piece {
-        font-size: 60px;
         cursor: pointer;
         z-index: 1;
+        color: black;
+
+        svg {
+            font-size: 60px;
+        }
     }
 }
