@@ -39,30 +39,30 @@ const Header = (props) => {
                             <MenuIcon />
                     </IconButton>
                     {props.children}
-                    <StaticImage id="title-logo" src="../../images/logo.png" alt="Time 4 OT logo" height={50} width={150} placeholder="none" />
-                    </Toolbar>
+                    <StaticImage id="title-logo" src="../../images/logo.png" alt="Time 4 OT logo" height={70} width={150} placeholder="none" />
+                </Toolbar>
                     <div>
-                        <Menu
-                            id="menu-appbar"
-                            anchorEl={anchorEl}
-                            anchorOrigin={{
-                                vertical: 'top',
-                                horizontal: 'left',
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: 'top',
-                                horizontal: 'left',
-                            }}
-                            open={Boolean(anchorEl)}
-                            onClose={handleClose}>
-                                <MenuItem onClick={handleClose}>
-                                    <a href="https://forms.gle/sQGbyfJk3KhdLSDx8" target="_blank">
-                                        Feedback (Opens in new tab)
-                                    </a>
-                                </MenuItem>
-                        </Menu>
-                    </div>
+                    <Menu
+                        id="menu-appbar"
+                        anchorEl={anchorEl}
+                        anchorOrigin={{
+                            vertical: 'top',
+                            horizontal: 'left',
+                        }}
+                        keepMounted
+                        transformOrigin={{
+                            vertical: 'top',
+                            horizontal: 'left',
+                        }}
+                        open={Boolean(anchorEl)}
+                        onClose={handleClose}>
+                            <MenuItem onClick={handleClose}>
+                                <a href="https://forms.gle/sQGbyfJk3KhdLSDx8" target="_blank">
+                                    Feedback (Opens in new tab)
+                                </a>
+                            </MenuItem>
+                    </Menu>
+                </div>
             </AppBar>
         </Box>
     );
