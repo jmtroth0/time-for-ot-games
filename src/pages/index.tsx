@@ -6,6 +6,7 @@ import "../assets/scss/main.scss";
 import getConfigs from "../assets/tsx/utilities/config";
 import SEO from "../assets/tsx/utilities/seo";
 import Header from "../assets/tsx/components/header";
+import Footer from "../assets/tsx/components/footer";
 
 
 
@@ -29,6 +30,7 @@ const IndexPage = () => {
                     )
                 })}
             </div>
+            <Footer />
         </main>
     )
 }

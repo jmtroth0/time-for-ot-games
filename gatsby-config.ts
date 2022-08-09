@@ -15,6 +15,13 @@ const config: GatsbyConfig = {
             },
             __key: "images"
         }, {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                name: "other",
+                path: "./src/assets/other/"
+            },
+            __key: "other"
+        }, {
             resolve: 'gatsby-plugin-manifest',
             options: {
                 name: "Time 4 OT",

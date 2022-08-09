@@ -1,0 +1,23 @@
+
+#footer-container {
+    #footer-toolbar {
+        background: #91dcff;
+        display: flex;
+        justify-content: space-between;
+
+        .footer-object {
+            padding: 0 3px;
+            margin: 0 5px;
+            font-size: small;
+        }
+        .footer-link {
+            cursor: pointer;
+            &:hover {
+                color: grey;
+            }
+        }
+        .copyright {
+
+        }
+    }
+}
