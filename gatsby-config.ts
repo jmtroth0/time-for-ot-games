@@ -7,7 +7,12 @@ const config: GatsbyConfig = {
         description: `Functional and educational occupational therapy games for children built by and for OTs`,
     },
     plugins:
-        ["gatsby-plugin-sass", "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp",
+        [
+            "gatsby-plugin-sass",
+            "gatsby-plugin-image",
+            "gatsby-plugin-sharp",
+            "gatsby-transformer-sharp",
+            "gatsby-plugin-gatsby-cloud",
         {
             resolve: 'gatsby-source-filesystem',
             options: {
