@@ -36,7 +36,7 @@ const Header = (props) => {
                     </IconButton>
                     {props.children}
                     <Link to="/">
-                        <StaticImage id="title-logo" src="../../images/logo.png" alt="Time 4 OT logo" height={70} width={150} placeholder="none" />
+                        <StaticImage id="title-logo" src="../../images/logo.png" alt="Time 4 OT logo" height={70} width={150} placeholder="blurred" />
                     </Link>
                 </Toolbar>
 
