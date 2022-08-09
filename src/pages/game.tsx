@@ -1,14 +1,14 @@
 import React, {useState, useEffect} from "react"
-import Board from "../assets/tsx/game_components/board"
-import Tray from "../assets/tsx/game_components/tray"
-import Pieces from "../assets/tsx/game_components/pieces";
-import Instructions from "../assets/tsx/game_components/instructions";
-import Feedback from "../assets/tsx/components/feedback";
-import { SquareLoader } from "react-spinners";
 import "../assets/scss/main.scss";
-import SEO from "../assets/tsx/utilities/seo";
-import { StaticImage } from "gatsby-plugin-image";
+import "../assets/scss/game.scss";
+import Board from "../assets/tsx/game_components/board"
+import Footer from "../assets/tsx/components/footer";
 import Header from "../assets/tsx/components/header";
+import Instructions from "../assets/tsx/game_components/instructions";
+import Pieces from "../assets/tsx/game_components/pieces";
+import { SquareLoader } from "react-spinners";
+import SEO from "../assets/tsx/utilities/seo";
+import Tray from "../assets/tsx/game_components/tray"
 
 
 const GamePage = ({location, data}) => {
@@ -74,7 +74,8 @@ const GamePage = ({location, data}) => {
                     <SquareLoader loading={loading} />
                 </div>
                 <Board boardImage={boardImage} loading={loading}  />
-                <Tray top="auto" bottom={0} roller={roller} colors={spinnerColors} numDice={numDice} numSides={numSides} />
+                <Tray top="auto" roller={roller} colors={spinnerColors} numDice={numDice} numSides={numSides} />
+            <Footer />
             </div>
         </main>
     )

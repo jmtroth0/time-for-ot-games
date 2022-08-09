@@ -1,12 +1,12 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import GameDisplay from "../assets/tsx/components/game_display";
+import "../assets/scss/constants.scss";
 import "../assets/scss/main.scss";
+import GameDisplay from "../assets/tsx/components/game_display";
 import getConfigs from "../assets/tsx/utilities/config";
-import SEO from "../assets/tsx/utilities/seo";
 import Footer from "../assets/tsx/components/footer";
 import Header from "../assets/tsx/components/header";
-import LandingText from "../assets/tsx/components/landing-text";
+import SEO from "../assets/tsx/utilities/seo";
 
 
 

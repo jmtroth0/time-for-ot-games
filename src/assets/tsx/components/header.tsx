@@ -1,14 +1,14 @@
 import * as React from 'react';
+import { Link } from "gatsby";
+import "../../scss/header.scss";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
-import { Link } from "gatsby";
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import { StaticImage } from "gatsby-plugin-image";
 import Toolbar from '@mui/material/Toolbar';
-import "../../scss/header.scss";
 
 
 const Header = (props) => {

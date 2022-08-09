@@ -1,7 +1,7 @@
 import * as React from 'react';
+import "../../scss/footer.scss";
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import "../../scss/footer.scss";
 import Disclaimer from "../../other/disclaimer.pdf";
 import PrivacyPolicy from "../../other/privacy-policy.pdf";
 import TermsOfUse from "../../other/terms-of-use.pdf";
