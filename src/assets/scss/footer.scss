@@ -1,7 +1,9 @@
+@use "constants" as c;
 
 #footer-container {
+
     #footer-toolbar {
-        background: #91dcff;
+        background: c.$blue;
         display: flex;
         justify-content: space-between;
 

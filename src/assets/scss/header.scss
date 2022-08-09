@@ -1,9 +1,10 @@
+@use "constants" as c;
 
 #header-container {
     #header-toolbar {
         display: flex;
         justify-content: space-between;
-        background: #91dcff;
+        background: c.$blue;
 
         #header-clickables {
             display: flex;

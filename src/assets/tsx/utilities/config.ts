@@ -4,6 +4,14 @@ import { config } from "process";
 const gameConfigs = {
     "Handwriting": [
         {
+            name: "Prewriting Strokes",
+            boardImage: "Prewriting",
+            roller: "dice",
+            numSides: 4,
+            instructionsContent: "Roll the dice and write the shape you land on or draw it with your arms.",
+        },
+
+        {
             name: "Any Letters (Capitals)",
             boardImage: "Capitals",
             roller: "dice",
@@ -39,13 +47,7 @@ const gameConfigs = {
             roller: "dice",
             instructionsContent: "Roll the dice and write the letter you land on. \nUpgrade: Write a word that starts with the letter you land one",
         },
-        {
-            name: "Prewriting Strokes",
-            boardImage: "Prewriting",
-            roller: "dice",
-            numSides: 4,
-            instructionsContent: "Roll the dice and write the shape you land on or draw it with your arms.",
-        },
+
     ],
 
     "Gross Motor": [

@@ -3,7 +3,7 @@ import type { GatsbyConfig } from "gatsby";
 const config: GatsbyConfig = {
     siteMetadata: {
         title: `Time 4 OT`,
-        siteUrl: `https://www.yourdomain.tld`
+        siteUrl: `https://www.time4ot.com`
     },
     plugins:
         ["gatsby-plugin-sass", "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp",

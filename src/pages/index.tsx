@@ -1,35 +1,30 @@
 import * as React from "react";
-import { graphql } from "gatsby";
-import GameDisplay from "../assets/tsx/components/game_display";
-import Feedback from "../assets/tsx/components/feedback";
+import { graphql, navigate} from "gatsby";
 import "../assets/scss/main.scss";
-import getConfigs from "../assets/tsx/utilities/config";
+import "../assets/scss/home.scss";
+import Box from '@mui/material/Box';
 import SEO from "../assets/tsx/utilities/seo";
-import Header from "../assets/tsx/components/header";
 import Footer from "../assets/tsx/components/footer";
+import Header from "../assets/tsx/components/header";
+import LandingText from "../assets/tsx/components/landing-text";
+import { StaticImage } from "gatsby-plugin-image";
+import LandingPage from "../assets/images/LandPage.svg"
 
 
 
 const IndexPage = () => {
-    const gameConfigs = getConfigs();
+
+    const goToGameList = () => {
+        navigate("/game-list");
+    };
 
     return (
         <main>
             <Header />
-            <div id="game-display-sections">
-                { Object.keys(gameConfigs).map((sectionName) => {
-                    return (
-                        <div className="game-display-section" key={sectionName}>
-                            <span className="game-display-section-header">{sectionName}</span>
-                            <div className="game-displays">
-                                {gameConfigs[sectionName].map((config) => {
-                                    return <GameDisplay config={config} image={config.boardImage} key={config.name} />
-                                })}
-                            </div>
-                        </div>
-                    )
-                })}
-            </div>
+            <Box className="home-page-content">
+                <LandingText />
+                <img onClick={goToGameList} onTouchStart={goToGameList} className="game-image" src={LandingPage} draggable="false" />
+            </Box>
             <Footer />
         </main>
     )
@@ -40,5 +35,3 @@ export default IndexPage;
 export const Head = () => (
     <SEO />
 );
-
-                // <span id="title">Time for OT</span>
