@@ -29,7 +29,21 @@ const config: GatsbyConfig = {
                 short_name: "Time 4 OT",
                 icon: 'src/assets/images/favicon.png',
             },
-        }
+        }, {
+            resolve: `gatsby-plugin-google-gtag`, options: {
+                trackingIds: [
+                    "G-J5B94C5EWD",
+                ],
+                gtagConfig: {
+                    anonymize_ip: true,
+                    cookie_expires: 0,
+                },
+                pluginConfig: {
+                    head: true,
+                    respectDNT: true,
+                },
+            },
+        },
     ]
 };
 
