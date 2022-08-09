@@ -50,7 +50,7 @@ const gameConfigs = {
 
     "Gross Motor": [
         {
-            name: "With Pictures/Movements",
+            name: "With Pictures/\u{200B}Movements",
             boardImage: "Movements",
             roller: "dice",
             numSides: 4,
@@ -72,7 +72,7 @@ const gameConfigs = {
 
     "Fine Motor" : [
         {
-            name: "Fine Motor/Visual Motor",
+            name: "Fine Motor/\u{200B}Visual Motor",
             boardImage: "FineMotorVisualMotor",
             roller: "dice",
             instructionsContent: "Roll the dice and complete the listed activity. Upgrade: Use tongs to have the client bring you the item (i.e. an orange ball) to support hand strengthening",
