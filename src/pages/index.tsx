@@ -23,7 +23,7 @@ const IndexPage = () => {
             <Header />
             <Box className="home-page-content">
                 <LandingText />
-                <img onClick={goToGameList} onTouchStart={goToGameList} className="game-image" src={LandingPage} draggable="false" />
+                <img onClick={goToGameList} onTouchStart={goToGameList} className="game-image" src={LandingPage} draggable="false" alt="spiral board game background" />
             </Box>
             <Footer />
         </main>

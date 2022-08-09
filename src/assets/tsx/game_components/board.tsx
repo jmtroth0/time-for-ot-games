@@ -7,7 +7,7 @@ class Board extends React.Component {
     render() {
         return (
             <div id="board" style={{display: `${this.props.loading ? "none" : ""}`}}>
-                <img className="game-image" src={getBoardImage(this.props.boardImage)} draggable="false"></img>
+                <img className="game-image" src={getBoardImage(this.props.boardImage)} alt="board image" draggable="false"></img>
             </div>
         )
     }

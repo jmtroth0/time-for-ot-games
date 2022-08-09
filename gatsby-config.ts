@@ -3,7 +3,8 @@ import type { GatsbyConfig } from "gatsby";
 const config: GatsbyConfig = {
     siteMetadata: {
         title: `Time 4 OT`,
-        siteUrl: `https://www.time4ot.com`
+        siteUrl: `https://www.time4ot.com`,
+        description: `Functional and educational occupational therapy games for children built by and for OTs`,
     },
     plugins:
         ["gatsby-plugin-sass", "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp",

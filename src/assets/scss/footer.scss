@@ -8,12 +8,12 @@
         justify-content: space-between;
 
         .footer-object {
-            padding: 0 3px;
             margin: 0 5px;
             font-size: small;
         }
         .footer-link {
             cursor: pointer;
+            padding: 15px 3px;
             &:hover {
                 color: grey;
             }
