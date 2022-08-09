@@ -8,8 +8,8 @@ const Instructions = (props) => {
     return (
         <div id="instructions-container">
             <Tooltip title={props.content}>
-                <Button id="instructions-button" variant="contained">
-                    Hover for instructions
+                <Button id="instructions-button" variant="outlined">
+                    Instructions
                 </Button>
             </Tooltip>
         </div>

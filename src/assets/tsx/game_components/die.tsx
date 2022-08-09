@@ -25,7 +25,7 @@ class Die extends React.Component<PropTypes, {}> {
 
     render () {
         return (
-            <div onClick={() => this.rollDice()}>
+            <div onTouchStart={() => this.rollDice()} onClick={() => this.rollDice()}>
                 <div className="dice one" key="one"
                     style={{
                         display: `${this.state.roll === 1 ? "flex" : "none"}`

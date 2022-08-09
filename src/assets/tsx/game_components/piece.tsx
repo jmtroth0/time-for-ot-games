@@ -5,7 +5,7 @@ import Draggable from "react-draggable";
 const Piece = (props) => {
     return (
         <Draggable bounds="#game-page">
-            <div className="piece" >
+            <div className="piece" style={{color: props.color}}>
                 {props.icon}
             </div>
         </Draggable>
