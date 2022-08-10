@@ -48,6 +48,11 @@ const config: GatsbyConfig = {
                     respectDNT: true,
                 },
             },
+        }, {
+            resolve: `gatsby-plugin-s3`,
+            options: {
+                bucketName: 'time4ot',
+            },
         },
     ]
 };
