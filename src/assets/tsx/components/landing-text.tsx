@@ -6,6 +6,20 @@ import Link from '@mui/material/Link';
 import '../../scss/landing-text.scss';
 
 const LandingText = (props) => {
+    let firefoxWarning;
+    if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+        firefoxWarning = (
+            <Box className="landing-text-box">
+                <span className="landing-text-header">Quick note on your browser</span>
+                <span className="firefox-warning landing-text">
+                    We noticed you are using Firefox! While we love that you value your privacy and are supporting open source software, we have noticed a few occasional bugs with some of the games and would recommend switching to Chrome, Safari, or Opera. Sorry for the inconvenience!
+                </span>
+            </Box>
+        );
+    } else {
+        firefoxWarning = <Box />;
+    }
+
     return (
         <Box id="landing-text-container" sx={{ flexGrow: 1 }}>
             <Box className="landing-text-box">
@@ -23,9 +37,16 @@ const LandingText = (props) => {
             <Box className="landing-text-box">
                 <span className="landing-text-header">Additional Resources:</span>
                 <span className="additional-resources landing-text">
-                    (COMING SOON) Explore our boom cards, teachers pay teachers, and favorite books and games. New resources are continually being added. Have a suggestion or game idea? Send us an email at <Link href="mailto:time4ot@therapysecure.com" underline="hover">time4ot@therapysecure.com</Link> or leave us some <Link href="https://forms.gle/sQGbyfJk3KhdLSDx8" target="_blank" underline="hover">feedback</Link>.
+                    Explore our <Link href="https://wow.boomlearning.com/store/authorId/RtDwy8TZPrPhwd2pE/?collection=Decks&keyword=OT%20time&sort=score&order=-1" target="_blank" underline="hover">boom cards</Link>, teachers pay teachers, and favorite books and games. New resources are continually being added. Have a suggestion or game idea? Send us an email at <Link href="mailto:time4ot@therapysecure.com" underline="hover">time4ot@therapysecure.com</Link> or leave us some <Link href="https://forms.gle/sQGbyfJk3KhdLSDx8" target="_blank" underline="hover">feedback</Link>.
                 </span>
             </Box>
+            <Box className="landing-text-box">
+                <span className="landing-text-header">Additional Resources:</span>
+                <span className="additional-resources landing-text">
+                    Explore our <Link href="https://wow.boomlearning.com/store/authorId/RtDwy8TZPrPhwd2pE/?collection=Decks&keyword=OT%20time&sort=score&order=-1" target="_blank" underline="hover">boom cards</Link>, teachers pay teachers, and favorite books and games. New resources are continually being added. Have a suggestion or game idea? Send us an email at <Link href="mailto:time4ot@therapysecure.com" underline="hover">time4ot@therapysecure.com</Link> or leave us some <Link href="https://forms.gle/sQGbyfJk3KhdLSDx8" target="_blank" underline="hover">feedback</Link>.
+                </span>
+            </Box>
+            {firefoxWarning}
             <Button size="medium" className="home-cta" variant="contained">
                 <GatsbyLink to="/game-list">Get Started</GatsbyLink>
             </Button>
