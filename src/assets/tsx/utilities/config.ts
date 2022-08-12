@@ -15,37 +15,37 @@ const gameConfigs = {
             name: "Any Letters (Capitals)",
             boardImage: "Capitals",
             roller: "dice",
-            instructionsContent: "Roll the dice and write the letter you land on. \nUpgrade: Write a word that starts with the letter you land one",
+            instructionsContent: "Roll the dice and write the letter you land on. \nUpgrade: Write a word that starts with the letter you land on",
         },
         {
             name: "Any Letters (Lowercase)",
             boardImage: "LowerCase",
             roller: "dice",
-            instructionsContent: "Roll the dice and write the letter you land on. \nUpgrade: Write a word that starts with the letter you land one",
+            instructionsContent: "Roll the dice and write the letter you land on. \nUpgrade: Write a word that starts with the letter you land on",
         },
         {
             name: "Common Reversals (bdpq)",
             boardImage: "bdpq",
             roller: "dice",
-            instructionsContent: "Roll the dice and write the letter you land on. \nUpgrade: Write a word that starts with the letter you land one",
+            instructionsContent: "Roll the dice and write the letter you land on. \nUpgrade: Write a word that starts with the letter you land on",
         },
         {
             name: "Common Reversals (NRSZ)",
             boardImage: "nrsz",
             roller: "dice",
-            instructionsContent: "Roll the dice and write the letter you land on. \nUpgrade: Write a word that starts with the letter you land one",
+            instructionsContent: "Roll the dice and write the letter you land on. \nUpgrade: Write a word that starts with the letter you land on",
         },
         {
             name: "Common Number Reversals",
             boardImage: "Numbers",
             roller: "dice",
-            instructionsContent: "Roll the dice and write the letter you land on. \nUpgrade: Write a word that starts with the letter you land one",
+            instructionsContent: "Roll the dice and write the number you land on.",
         },
         {
             name: "C Starting Letters",
             boardImage: "LetterCStarters",
             roller: "dice",
-            instructionsContent: "Roll the dice and write the letter you land on. \nUpgrade: Write a word that starts with the letter you land one",
+            instructionsContent: "Roll the dice and write the letter you land on. \nUpgrade: Write a word that starts with the letter you land on",
         },
 
     ],
@@ -92,7 +92,7 @@ const gameConfigs = {
             name: "Interoception",
             boardImage: "InteroceptionAndComplexEmotions",
             roller: "dice",
-            instructionsContent: "Roll the dice and complete the task/activity. Blue square: Body Activity. Complete and discuss how it made you feel. Green: Name that feeling (more than one could be correct) Yellow: Body clue from the emotion (can act out then describe if too hard)",
+            instructionsContent: "Roll the dice and complete the task/activity. Blue: Complete the body activity and state how it makes you feel. Green: Name that feeling (ie nervous or sick when my stomach hurts). Yellow: Body clue from the emotion (ie yawning for tired, can act out with kid then describe if too hard).",
         }
     ],
 
