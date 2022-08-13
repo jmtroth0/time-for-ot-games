@@ -6,19 +6,19 @@ import Link from '@mui/material/Link';
 import '../../scss/landing-text.scss';
 
 const LandingText = (props) => {
-    let firefoxWarning;
-    if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
-        firefoxWarning = (
-            <Box className="landing-text-box">
-                <span className="landing-text-header">Quick note on your browser</span>
-                <span className="firefox-warning landing-text">
-                    We noticed you are using Firefox! While we love that you value your privacy and are supporting open source software, we have noticed a few occasional bugs with some of the games and would recommend switching to Chrome, Safari, or Opera. Sorry for the inconvenience!
-                </span>
-            </Box>
-        );
-    } else {
-        firefoxWarning = <Box />;
-    }
+    const [firefoxWarning, setFirefoxWarning] = React.useState(<Box />);
+    React.useEffect(() => {
+        if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+            setFirefoxWarning(
+                <Box className="landing-text-box">
+                    <span className="landing-text-header">Quick note on your browser</span>
+                    <span className="firefox-warning landing-text">
+                        We noticed you are using Firefox! While we love that you value your privacy and are supporting open source software, we have noticed a few occasional bugs with some of the games and would recommend switching to Chrome, Safari, or Opera. Sorry for the inconvenience!
+                    </span>
+                </Box>
+            );
+        }
+    });
 
     return (
         <Box id="landing-text-container" sx={{ flexGrow: 1 }}>
