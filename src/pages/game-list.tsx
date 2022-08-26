@@ -38,5 +38,5 @@ const GameListPage = () => {
 export default GameListPage;
 
 export const Head = () => (
-    <SEO />
+    <SEO title="Time 4 OT Games" />
 );

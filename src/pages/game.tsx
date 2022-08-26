@@ -84,5 +84,5 @@ const GamePage = ({location, data}) => {
 export default GamePage;
 
 export const Head = () => (
-    <SEO />
+    <SEO title="Time 4 OT Play" />
 );
