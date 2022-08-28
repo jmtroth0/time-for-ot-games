@@ -28,18 +28,25 @@ const LandingText = (props) => {
                     We are a board game website made by OTs for OTs. We know budgets and time can be tight for therapists wanting to provide fun and functional activities for their clients and wanted to provide free, no prep activities that will be engaging for a range of ages and goals.
                 </span>
             </Box>
+
             <Box className="landing-text-box">
                 <span className="landing-text-header">What's Included?</span>
                 <span className="whats-included landing-text">
                     Multiple categories of board games from handwriting to social emotional. Games are kept intentionally simple to promote sustained attention and allow for easy upgrades and downgrades. Each game has four game pieces and a dice or spinner.
                 </span>
             </Box>
+
             <Box className="landing-text-box">
                 <span className="landing-text-header">Additional Resources:</span>
                 <span className="additional-resources landing-text">
-                    Explore our <Link href="https://wow.boomlearning.com/store/authorId/RtDwy8TZPrPhwd2pE/?collection=Decks&keyword=OT%20time&sort=score&order=-1" target="_blank" underline="hover">boom cards</Link>, <Link href="https://www.teacherspayteachers.com/Sellers-Im-Following/Add/Time4ot">Teachers Pay Teachers</Link>, and favorite books and games. New resources are continually being added. Have a suggestion or game idea? Send us an email at <Link href="mailto:time4ot@therapysecure.com" underline="hover">time4ot@therapysecure.com</Link> or leave us some <Link href="https://forms.gle/sQGbyfJk3KhdLSDx8" target="_blank" underline="hover">feedback</Link>.
+                    Explore our <Link href="https://wow.boomlearning.com/store/authorId/RtDwy8TZPrPhwd2pE/?collection=Decks&keyword=OT%20time&sort=score&order=-1" target="_blank" underline="hover">boom cards</Link>,
+                    <Link href="https://www.teacherspayteachers.com/Sellers-Im-Following/Add/Time4ot" target="_blank" underline="hover">Teachers Pay Teachers</Link>,
+                    and favorite books and games. New resources are continually being added. Have a suggestion or game idea?
+                    Send us an email at <Link href="mailto:time4ot@therapysecure.com" target="_blank" underline="hover">time4ot@therapysecure.com</Link>
+                    or leave us some <Link href="https://forms.gle/sQGbyfJk3KhdLSDx8" target="_blank" underline="hover">feedback</Link>.
                 </span>
             </Box>
+
             {firefoxWarning}
             <Button size="medium" className="home-cta" variant="contained">
                 <GatsbyLink to="/game-list">Get Started</GatsbyLink>
