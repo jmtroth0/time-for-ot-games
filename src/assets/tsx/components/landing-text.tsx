@@ -37,7 +37,7 @@ const LandingText = (props) => {
             <Box className="landing-text-box">
                 <span className="landing-text-header">Additional Resources:</span>
                 <span className="additional-resources landing-text">
-                    Explore our <Link href="https://wow.boomlearning.com/store/authorId/RtDwy8TZPrPhwd2pE/?collection=Decks&keyword=OT%20time&sort=score&order=-1" target="_blank" underline="hover">boom cards</Link>, teachers pay teachers, and favorite books and games. New resources are continually being added. Have a suggestion or game idea? Send us an email at <Link href="mailto:time4ot@therapysecure.com" underline="hover">time4ot@therapysecure.com</Link> or leave us some <Link href="https://forms.gle/sQGbyfJk3KhdLSDx8" target="_blank" underline="hover">feedback</Link>.
+                    Explore our <Link href="https://wow.boomlearning.com/store/authorId/RtDwy8TZPrPhwd2pE/?collection=Decks&keyword=OT%20time&sort=score&order=-1" target="_blank" underline="hover">boom cards</Link>, <Link href="https://www.teacherspayteachers.com/Sellers-Im-Following/Add/Time4ot">Teachers Pay Teachers</Link>, and favorite books and games. New resources are continually being added. Have a suggestion or game idea? Send us an email at <Link href="mailto:time4ot@therapysecure.com" underline="hover">time4ot@therapysecure.com</Link> or leave us some <Link href="https://forms.gle/sQGbyfJk3KhdLSDx8" target="_blank" underline="hover">feedback</Link>.
                 </span>
             </Box>
             {firefoxWarning}
