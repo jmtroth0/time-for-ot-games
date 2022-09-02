@@ -44,6 +44,7 @@ const GamePage = ({location, data}) => {
         setLoading(false);
         if (location.state?.config) {
             window.sessionStorage.config = JSON.stringify(location.state.config);
+            typeof window !== "undefined" && window.gtag && window.gtag("event", "load-game", {"game-name":   location.state.config.name});
         } else if (window.sessionStorage.getItem('config')) {
             let config = JSON.parse(window.sessionStorage.config)
             setBoardImage(config.boardImage);
@@ -56,6 +57,7 @@ const GamePage = ({location, data}) => {
                 setSpinnerColors(config.spinnerColors);
             }
             setInstructionsContent(config.instructionsContent);
+            typeof window !== "undefined" && window.gtag && window.gtag("event", "load-game", {"game-name":   config.name});
         }
     }, []);
 

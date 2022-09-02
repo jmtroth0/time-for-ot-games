@@ -9,6 +9,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import { StaticImage } from "gatsby-plugin-image";
 import Toolbar from '@mui/material/Toolbar';
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 
 const Header = (props) => {
@@ -56,24 +57,24 @@ const Header = (props) => {
                         open={Boolean(anchorEl)}
                         onClose={handleClose}>
                             <MenuItem onClick={handleClose}>
-                                <a href="https://wow.boomlearning.com/store/authorId/RtDwy8TZPrPhwd2pE/?collection=Decks&keyword=OT%20time&sort=score&order=-1" target="_blank">Check out our Boom Cards</a>
+                                <OutboundLink href="https://wow.boomlearning.com/store/authorId/RtDwy8TZPrPhwd2pE/?collection=Decks&keyword=OT%20time&sort=score&order=-1" target="_blank">Check out our Boom Cards</OutboundLink>
                             </MenuItem>
                             <MenuItem onClick={handleClose}>
-                                <a href="https://www.teacherspayteachers.com/Sellers-Im-Following/Add/Time4ot" target="_blank">Teachers Pay Teachers</a>
+                                <OutboundLink href="https://www.teacherspayteachers.com/Sellers-Im-Following/Add/Time4ot" target="_blank">Teachers Pay Teachers</OutboundLink>
                             </MenuItem>
                             <MenuItem onClick={handleClose}>
-                                <a href="https://blog.time4ot.com/book-recommendations/" target="_blank">Recommended Books</a>
+                                <OutboundLink href="https://blog.time4ot.com/book-recommendations/" target="_blank">Recommended Books</OutboundLink>
                             </MenuItem>
                             <MenuItem onClick={handleClose}>
-                                <a href="https://blog.time4ot.com/school-based/" target="_blank">Recommended Supplies</a>
+                                <OutboundLink href="https://blog.time4ot.com/school-based/" target="_blank">Recommended Supplies</OutboundLink>
                             </MenuItem>
                             <MenuItem onClick={handleClose}>
-                                <a href="https://forms.gle/sQGbyfJk3KhdLSDx8" target="_blank">
+                                <OutboundLink href="https://forms.gle/sQGbyfJk3KhdLSDx8" target="_blank">
                                     Leave us some feedback!
-                                </a>
+                                </OutboundLink>
                             </MenuItem>
                             <MenuItem onClick={handleClose}>
-                                <a href="mailto:time4ot@therapysecure.com" target="_blank">Send us an email</a>
+                                <OutboundLink href="mailto:time4ot@therapysecure.com" target="_blank">Send us an email</OutboundLink>
                             </MenuItem>
                     </Menu>
                 </div>

@@ -2,6 +2,8 @@ import * as React from 'react';
 import { Link as GatsbyLink } from 'gatsby';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 import Link from '@mui/material/Link';
 import '../../scss/landing-text.scss';
 
@@ -39,7 +41,7 @@ const LandingText = (props) => {
             <Box className="landing-text-box">
                 <span className="landing-text-header">Additional Resources:</span>
                 <span className="additional-resources landing-text">
-                    Explore our <Link href="https://wow.boomlearning.com/store/authorId/RtDwy8TZPrPhwd2pE/?collection=Decks&keyword=OT%20time&sort=score&order=-1" target="_blank" underline="hover">boom cards</Link>, <Link href="https://www.teacherspayteachers.com/Sellers-Im-Following/Add/Time4ot" target="_blank" underline="hover">Teachers Pay Teachers</Link>, and favorite <Link href="https://blog.time4ot.com/book-recommendations/" target="_blank" underline="hover">books</Link> and <Link href="https://blog.time4ot.com/school-based" target="_blank" underline="hover">recommended supplies</Link>. New resources are continually being added. Have a suggestion or game idea? Send us an email at <Link href="mailto:time4ot@therapysecure.com" target="_blank" underline="hover">time4ot@therapysecure.com</Link> or leave us some <Link href="https://forms.gle/sQGbyfJk3KhdLSDx8" target="_blank" underline="hover">feedback</Link>.
+                    Explore our <OutboundLink href="https://wow.boomlearning.com/store/authorId/RtDwy8TZPrPhwd2pE/?collection=Decks&keyword=OT%20time&sort=score&order=-1" target="_blank"><Link underline="hover">boom cards</Link></OutboundLink>, <OutboundLink href="https://www.teacherspayteachers.com/Sellers-Im-Following/Add/Time4ot" target="_blank"><Link underline="hover">Teachers Pay Teachers</Link></OutboundLink>, and favorite <OutboundLink href="https://blog.time4ot.com/book-recommendations/" target="_blank"><Link underline="hover">books</Link></OutboundLink> and <OutboundLink href="https://blog.time4ot.com/school-based" target="_blank"><Link underline="hover">recommended supplies</Link></OutboundLink>. New resources are continually being added. Have a suggestion or game idea? Send us an email at <OutboundLink href="mailto:time4ot@therapysecure.com" target="_blank"><Link underline="hover">time4ot@therapysecure.com</Link></OutboundLink> or leave us some <OutboundLink href="https://forms.gle/sQGbyfJk3KhdLSDx8" target="_blank"><Link underline="hover">feedback</Link></OutboundLink>.
                 </span>
             </Box>
 
