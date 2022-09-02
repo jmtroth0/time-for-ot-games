@@ -63,6 +63,12 @@ const Header = (props) => {
                             <MenuItem onClick={handleClose}>
                                 <a href="https://wow.boomlearning.com/store/authorId/RtDwy8TZPrPhwd2pE/?collection=Decks&keyword=OT%20time&sort=score&order=-1" target="_blank">Check out our Boom Cards</a>
                             </MenuItem>
+                            <MenuItem onClick={handleClose}>
+                                <a href="https://www.teacherspayteachers.com/Sellers-Im-Following/Add/Time4ot" target="_blank">Teachers Pay Teachers</a>
+                            </MenuItem>
+                            <MenuItem onClick={handleClose}>
+                                <a href="mailto:time4ot@therapysecure.com" target="_blank">Send us an email</a>
+                            </MenuItem>
                     </Menu>
                 </div>
             </AppBar>
