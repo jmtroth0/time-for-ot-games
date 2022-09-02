@@ -12,6 +12,7 @@ import Movements from "../../images/movements.svg";
 import nrsz from "../../images/nrsz.svg";
 import Numbers from "../../images/Numbers.svg";
 import Prewriting from "../../images/Prewriting.svg";
+import Toolbox from "../../images/Toolbox.svg";
 
 
 const BOARD_NAMES = {
@@ -29,6 +30,7 @@ const BOARD_NAMES = {
     nrsz: nrsz,
     Numbers: Numbers,
     Prewriting: Prewriting,
+    Toolbox: Toolbox,
 }
 
 const getBoardImage = (boardName: string) => {

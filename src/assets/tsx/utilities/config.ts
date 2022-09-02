@@ -10,7 +10,6 @@ const gameConfigs = {
             numSides: 4,
             instructionsContent: "Roll the dice and write the shape you land on or draw it with your arms.",
         },
-
         {
             name: "Any Letters (Capitals)",
             boardImage: "Capitals",
@@ -93,7 +92,13 @@ const gameConfigs = {
             boardImage: "InteroceptionAndComplexEmotions",
             roller: "dice",
             instructionsContent: "Roll the dice and complete the task/activity. Blue: Complete the body activity and state how it makes you feel. Green: Name that feeling (ie nervous or sick when my stomach hurts). Yellow: Body clue from the emotion (ie yawning for tired, can act out with kid then describe if too hard).",
-        }
+        },
+        {
+            name: "Emotional Tools",
+            boardImage: "Toolbox",
+            roller: "dice",
+            instructionsContent: "Roll the dice and list a tool for when you are having the feeling within the color coded area you land on, ie taking a break when sad (modeling or just sitting with your feelings are okay too!)",
+        },
     ],
 
     "Miscellaneous": [
