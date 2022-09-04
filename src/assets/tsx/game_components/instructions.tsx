@@ -7,7 +7,7 @@ import Tooltip from '@mui/material/Tooltip';
 const Instructions = (props) => {
     return (
         <div id="instructions-container">
-            <Tooltip title={props.content}>
+            <Tooltip title={props.content} enterTouchDelay={0} leaveTouchDelay={4000}>
                 <Button id="instructions-button" variant="outlined">
                     Instructions
                 </Button>
