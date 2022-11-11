@@ -122,8 +122,8 @@ const gameConfigs = {
             instructionsContent: "Roll the dice and answer the question or fact below. Feel free to model or give ideas",
         },
         {
-            name: "Voice Volume",
-            boardImage: "Voice Volume",
+            name: "Voice Volume Meter",
+            boardImage: "VoiceVolumeMeter",
             roller: "dice",
             instructionsContent: "Roll the dice and either model the voice volume or state a situation where it would be appropriate to use this volume. ",
         },

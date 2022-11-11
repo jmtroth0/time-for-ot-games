@@ -13,6 +13,9 @@ import nrsz from "../../images/nrsz.svg";
 import Numbers from "../../images/Numbers.svg";
 import Prewriting from "../../images/Prewriting.svg";
 import Toolbox from "../../images/Toolbox.svg";
+import PositiveEmotions from "../../images/PositiveEmotions.svg";
+import VoiceVolumeMeter from "../../images/VoiceVolumeMeter.svg";
+import BodySpeeds from "../../images/BodySpeeds.svg";
 
 
 const BOARD_NAMES = {
@@ -31,6 +34,9 @@ const BOARD_NAMES = {
     Numbers: Numbers,
     Prewriting: Prewriting,
     Toolbox: Toolbox,
+    PositiveEmotions: PositiveEmotions,
+    VoiceVolumeMeter: VoiceVolumeMeter,
+    BodySpeeds: BodySpeeds,
 }
 
 const getBoardImage = (boardName: string) => {
