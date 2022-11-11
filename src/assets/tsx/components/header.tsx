@@ -57,7 +57,7 @@ const Header = (props) => {
                         open={Boolean(anchorEl)}
                         onClose={handleClose}>
                             <MenuItem onClick={handleClose}>
-                                <OutboundLink href="https://wow.boomlearning.com/store/authorId/RtDwy8TZPrPhwd2pE/?collection=Decks&keyword=OT%20time&sort=score&order=-1" target="_blank">Check out our Boom Cards</OutboundLink>
+                                <OutboundLink href="https://wow.boomlearning.com/store/authorId/RtDwy8TZPrPhwd2pE/?collection=Decks&keyword=OT%20time&sort=score&order=-1" target="_blank">Boom Cards</OutboundLink>
                             </MenuItem>
                             <MenuItem onClick={handleClose}>
                                 <OutboundLink href="https://www.teacherspayteachers.com/Sellers-Im-Following/Add/Time4ot" target="_blank">Teachers Pay Teachers</OutboundLink>
@@ -76,7 +76,10 @@ const Header = (props) => {
                             <MenuItem onClick={handleClose}>
                                 <OutboundLink href="mailto:time4ot@therapysecure.com" target="_blank">Send us an email</OutboundLink>
                             </MenuItem>
-                    </Menu>
+                             <MenuItem onClick={handleClose}>
+                                <OutboundLink href="https://blog.time4ot.com/" target="_blank">Interventions</OutboundLink>
+                            </MenuItem>
+                   </Menu>
                 </div>
             </AppBar>
         </Box>
