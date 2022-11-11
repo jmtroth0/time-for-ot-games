@@ -99,6 +99,19 @@ const gameConfigs = {
             roller: "dice",
             instructionsContent: "Roll the dice and list a tool for when you are having the feeling within the color coded area you land on, ie taking a break when sad (modeling or just sitting with your feelings are okay too!)",
         },
+        {
+            name: "Positive Emotions",
+            boardImage: "PositiveEmotions",
+            roller: "dice",
+            instructionsContent: "Roll the dice and state a time or situation where you would experience the emotion you land on",
+        },
+        {
+            name: "Body Speeds",
+            boardImage: "BodySpeeds",
+            roller: "dice",
+            instructionsContent: "Roll the dice and state an emotion, tool, or situation where your body would be in this speed/zone",
+        },
+
     ],
 
     "Miscellaneous": [
@@ -107,7 +120,14 @@ const gameConfigs = {
             boardImage: "AllAboutMe",
             roller: "dice",
             instructionsContent: "Roll the dice and answer the question or fact below. Feel free to model or give ideas",
-        }
+        },
+        {
+            name: "Voice Volume",
+            boardImage: "Voice Volume",
+            roller: "dice",
+            instructionsContent: "Roll the dice and either model the voice volume or state a situation where it would be appropriate to use this volume. ",
+        },
+
     ],
 };
 

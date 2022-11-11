@@ -21,6 +21,7 @@
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.9.2",
     "gatsby": "^4.24.4",
+    "gatsby-parcel-config": "^1.0.0",
     "gatsby-plugin-gatsby-cloud": "^4.24.0",
     "gatsby-plugin-google-gtag": "^4.24.0",
     "gatsby-plugin-image": "^2.24.0",
@@ -36,6 +37,9 @@
     "react-draggable": "^4.4.5",
     "react-spinners": "^0.13.3",
     "sass": "^1.51.0"
+  },
+  "parcelDependencies": {
+    "@parcel/transformer-react-refresh-wrap": "2.8.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.31",
