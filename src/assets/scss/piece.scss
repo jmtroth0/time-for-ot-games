@@ -5,10 +5,8 @@
     .piece {
         cursor: pointer;
         z-index: 1;
-        color: black;
-
-        svg {
-            font-size: 60px;
+        .piece-image {
+            height: 60px;
         }
     }
 }
